@@ -29,7 +29,7 @@ def check_gpa_update():
             current_gpa = gpa_element.get_text(strip=True)
             print(f"GPA Found: {current_gpa}")
             if PREVIOUS_GPA != current_gpa:
-                print("🎉 GPA has been updated!")
+                print(" GPA has been updated!")
                 PREVIOUS_GPA = current_gpa
             else:
                 print("No updates yet.")
@@ -41,7 +41,7 @@ def check_gpa_update():
 
 schedule.every(1).minutes.do(check_gpa_update)
 
-print("🚀 GPA Update Checker Started!")
+print(" GPA Update Checker Started!")
 while True:
     schedule.run_pending()
     time.sleep(1)
